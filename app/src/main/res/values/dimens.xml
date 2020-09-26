@@ -8,6 +8,7 @@
     <dimen name="buttonWidth">200dp</dimen>
     <dimen name="buttonPadding">15dp</dimen>
     <dimen name="buttonDrawableSize">20dp</dimen>
+    <dimen name="removeButtonDrawableSize">30dp</dimen>
 
     <dimen name="smallTextSize">18sp</dimen>
     <dimen name="mediumTextSize">22sp</dimen>

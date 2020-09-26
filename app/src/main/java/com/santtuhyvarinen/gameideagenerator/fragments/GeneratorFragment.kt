@@ -61,10 +61,6 @@ class GeneratorFragment : Fragment() {
         setButtonDrawable(generateButton, R.drawable.ic_dice, R.dimen.buttonDrawableSize)
         setButtonDrawable(favoriteButton, R.drawable.ic_favorite, R.dimen.buttonDrawableSize)
 
-        val dividerDots = 10
-        divider1.dots = dividerDots
-        divider2.dots = dividerDots
-
         generateIdea()
     }
     private fun setButtonDrawable(button : Button, drawableId : Int, dimenId : Int) {

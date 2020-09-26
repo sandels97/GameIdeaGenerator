@@ -7,11 +7,17 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
 import androidx.core.content.ContextCompat
+import com.santtuhyvarinen.R
 
 class DotDivider(context : Context, attributeSet: AttributeSet) : View(context, attributeSet) {
 
-    var dotRadius = 5f
+    var dotRadius = 10f
     var dotColor = Color.WHITE
+    set(value) {
+        field = value
+        paint.color = value
+    }
+
     var dots = 5
 
     val paint : Paint = Paint()
@@ -19,6 +25,20 @@ class DotDivider(context : Context, attributeSet: AttributeSet) : View(context, 
         paint.isAntiAlias = true
         paint.color = dotColor
         paint.style = Paint.Style.FILL
+
+        if (attributeSet != null) {
+            val a = context.obtainStyledAttributes(attributeSet, R.styleable.DotDivider)
+            if (a.hasValue(R.styleable.DotDivider_color)) {
+                dotColor = a.getColor(R.styleable.DotDivider_color, Color.WHITE)
+            }
+            if (a.hasValue(R.styleable.DotDivider_dots)) {
+                dots = a.getInt(R.styleable.DotDivider_dots, 5)
+            }
+            if (a.hasValue(R.styleable.DotDivider_dot_radius)) {
+                dotRadius = a.getFloat(R.styleable.DotDivider_dot_radius, 10f)
+            }
+            a.recycle()
+        }
     }
 
     override fun onDraw(canvas: Canvas) {

@@ -10,6 +10,8 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/dividerHeight"
         android:layout_marginTop="@dimen/mainMargin"
+        app:dots="10"
+        app:color="@color/colorText"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/gameIdeaText"
         app:layout_constraintRight_toRightOf="@id/gameIdeaText"/>
@@ -30,6 +32,8 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/dividerHeight"
         android:layout_marginTop="@dimen/mainMargin"
+        app:dots="10"
+        app:color="@color/colorText"
         app:layout_constraintTop_toBottomOf="@id/gameIdeaText"
         app:layout_constraintLeft_toLeftOf="@id/gameIdeaText"
         app:layout_constraintRight_toRightOf="@id/gameIdeaText"/>
