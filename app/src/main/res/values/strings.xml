@@ -2,4 +2,7 @@
     <string name="app_name">Game Idea Generator</string>
 
     <string name="generate">Generate</string>
+
+    <string name="title_generator">Generator</string>
+    <string name="title_favorites">Favorites</string>
 </resources>

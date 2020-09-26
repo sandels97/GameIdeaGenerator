@@ -1,6 +1,7 @@
-package com.santtuhyvarinen
+package com.santtuhyvarinen.gameideagenerator
 
 import android.content.Context
+import com.santtuhyvarinen.R
 import java.util.*
 import kotlin.random.Random
 

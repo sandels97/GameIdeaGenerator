@@ -15,4 +15,6 @@
     <dimen name="buttonTextSize">24sp</dimen>
 
     <dimen name="textAreaWidth">400dp</dimen>
+
+    <dimen name="bottomNavigationHeight">80dp</dimen>
 </resources>
