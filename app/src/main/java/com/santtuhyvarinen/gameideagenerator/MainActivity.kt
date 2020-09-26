@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -22,7 +23,12 @@ class MainActivity : AppCompatActivity() {
 
         NavigationUI.setupWithNavController(navView, navController)
 
-        setupActionBarWithNavController(this, navController)
-    }
+        val appBarConfiguration = AppBarConfiguration
+            .Builder(
+                R.id.navigation_generator,
+                R.id.navigation_favorites)
+            .build()
 
+        setupActionBarWithNavController(this, navController, appBarConfiguration)
+    }
 }
