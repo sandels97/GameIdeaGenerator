@@ -45,7 +45,7 @@ class GeneratorFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            favorites.add(currentIdea)
+            favorites.add(0, currentIdea)
             val success = FavoritesUtil.saveFavorites(requireContext(), favorites)
 
             if(success) {

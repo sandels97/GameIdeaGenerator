@@ -30,7 +30,7 @@ class IdeaGenerator(context: Context) {
         val theme = themes[Random.nextInt(themes.size)]
         val adjective = adjectives[Random.nextInt(adjectives.size)]
 
-        val string = "${adjective} ${theme.toLowerCase(Locale.ROOT)}\n${genre.toLowerCase(Locale.ROOT)} game\nwith ${genre2.toLowerCase(Locale.ROOT)} elements"
+        val string = "${adjective} ${theme}\n${genre} game\nwith ${genre2} mechanics"
 
         return string
     }
