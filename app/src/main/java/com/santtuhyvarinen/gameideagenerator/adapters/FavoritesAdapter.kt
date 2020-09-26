@@ -18,10 +18,12 @@ class FavoritesAdapter(private val context : Context, var favorites : List<Strin
 
     var favoritesAdapterListener: FavoritesAdapterListener? = null
 
-    class ViewHolder(val view : View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val textView: TextView
+        val removeButton : View
         init {
             textView = view.findViewById(R.id.gameIdeaText)
+            removeButton = view.findViewById(R.id.removeButton)
         }
     }
 
@@ -38,6 +40,9 @@ class FavoritesAdapter(private val context : Context, var favorites : List<Strin
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.textView.text = favorites[position]
 
+        holder.removeButton.setOnClickListener {
+            favoritesAdapterListener?.delete(position)
+        }
     }
 
     interface FavoritesAdapterListener {

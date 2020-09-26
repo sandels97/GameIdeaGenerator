@@ -41,7 +41,7 @@ class GeneratorFragment : Fragment() {
 
         favoriteButton.setOnClickListener {
             if(favoriteAlready) {
-                Toast.makeText(requireContext(), getString(R.string.favorite_already), Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), getString(R.string.favorite_already), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -49,7 +49,7 @@ class GeneratorFragment : Fragment() {
             val success = FavoritesUtil.saveFavorites(requireContext(), favorites)
 
             if(success) {
-                Toast.makeText(requireContext(), getString(R.string.favorite_added), Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), getString(R.string.favorite_added), Toast.LENGTH_SHORT).show()
                 favoriteButton.isSelected = true
                 favoriteAlready = true
             }

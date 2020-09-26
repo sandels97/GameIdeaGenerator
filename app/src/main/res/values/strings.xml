@@ -3,11 +3,15 @@
 
     <string name="generate">Generate</string>
     <string name="favorite">Favorite</string>
-    <string name="favorite_already">Already a favorite</string>
 
 
     <string name="title_generator">Generator</string>
     <string name="title_favorites">Favorites</string>
 
     <string name="favorite_added">A new favorite added</string>
+    <string name="favorite_removed">Favorite removed</string>
+    <string name="favorite_already">Already a favorite</string>
+
+
+    <string name="favorite_remove_confirmation">Remove this idea from favorites?</string>
 </resources>
