@@ -5,7 +5,7 @@
     <dimen name="elevation">5dp</dimen>
 
     <dimen name="buttonCorners">20dp</dimen>
-    <dimen name="buttonWidth">250dp</dimen>
+    <dimen name="buttonWidth">200dp</dimen>
     <dimen name="buttonPadding">15dp</dimen>
     <dimen name="buttonDrawableSize">20dp</dimen>
 

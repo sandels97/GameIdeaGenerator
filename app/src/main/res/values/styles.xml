@@ -28,4 +28,13 @@
         <item name="android:drawablePadding">@dimen/mainMargin</item>
     </style>
 
+    <style name="FavoriteButton" parent="TextAppearance.AppCompat.Widget.Button">
+        <item name="android:background">@drawable/background_favorite_button</item>
+        <item name="android:textSize">@dimen/buttonTextSize</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+        <item name="android:elevation">@dimen/elevation</item>
+        <item name="android:padding">@dimen/buttonPadding</item>
+        <item name="android:drawablePadding">@dimen/mainMargin</item>
+    </style>
+
 </resources>

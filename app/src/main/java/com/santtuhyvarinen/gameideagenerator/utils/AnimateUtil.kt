@@ -1,5 +1,6 @@
 package com.santtuhyvarinen.gameideagenerator.utils
 
+import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.Animation
 import android.view.animation.DecelerateInterpolator
@@ -10,7 +11,7 @@ class AnimateUtil {
     companion object {
         const val TEXT_ANIMATION_SPEED = 100L
 
-        fun animateTextChange(textView : TextView, newText : String) {
+        fun animateTextChange(view : View, textView : TextView, newText : String) {
             val scaleAnimationExit = ScaleAnimation(
                 1f, 1f,
                 1f, 0f,
@@ -29,7 +30,7 @@ class AnimateUtil {
 
                 override fun onAnimationEnd(p0: Animation?) {
                     textView.text = newText
-                    textView.startAnimation(scaleAnimationEntrance)
+                    view.startAnimation(scaleAnimationEntrance)
                 }
 
                 override fun onAnimationRepeat(p0: Animation?) {
@@ -43,7 +44,7 @@ class AnimateUtil {
             scaleAnimationEntrance.duration = TEXT_ANIMATION_SPEED
 
             //First play scaleAnimationExit and then play scaleAnimationEntrance
-            textView.startAnimation(scaleAnimationExit)
+            view.startAnimation(scaleAnimationExit)
         }
     }
 }

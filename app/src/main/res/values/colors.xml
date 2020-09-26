@@ -10,4 +10,9 @@
     <color name="colorBackground">#1c1c1c</color>
     <color name="colorText">#ffffff</color>
     <color name="colorButtonText">#000000</color>
+
+
+    <color name="colorFavoriteButtonSelected">#c10000</color>
+    <color name="colorFavoriteButton">#ffffff</color>
+    <color name="colorFavoriteButtonPressed">#dddddd</color>
 </resources>

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.santtuhyvarinen.gameideagenerator.IdeaGenerator
 import com.santtuhyvarinen.R
 import com.santtuhyvarinen.gameideagenerator.adapters.FavoritesAdapter
+import com.santtuhyvarinen.gameideagenerator.utils.FavoritesUtil
 import kotlinx.android.synthetic.main.fragment_favorites.*
 
 class FavoritesFragment : Fragment() {
@@ -28,10 +29,7 @@ class FavoritesFragment : Fragment() {
 
         gameIdeaGenerator = IdeaGenerator(requireContext())
 
-        favorites.add(gameIdeaGenerator.generateNewIdea())
-        favorites.add(gameIdeaGenerator.generateNewIdea())
-        favorites.add(gameIdeaGenerator.generateNewIdea())
-        favorites.add(gameIdeaGenerator.generateNewIdea())
+        favorites = FavoritesUtil.loadFavorites(requireContext())
 
         favoritesAdapter = FavoritesAdapter(requireContext(), favorites)
         recyclerView.adapter = favoritesAdapter
